@@ -140,7 +140,7 @@ class DegPage(QtWidgets.QMainWindow):
 
 # functions to add a random image to image viewer input
     def random_deg_image(self):
-        directory = r"C:\Users\HP\PycharmProjects\pythonProject\demo_app\data\images\XQLFW"
+        directory = r"data\images\XQLFW"
         imagePath=os.path.join(directory,self.random_image(directory))
         print(imagePath)
         self.main_app.photoViewerInput.set_image(imagePath)
@@ -191,7 +191,7 @@ class DegPage(QtWidgets.QMainWindow):
                 self.main_app.ui.lowresvalue.setText(str(percentage))
             degraded_image= generate_lowresolution(degraded_image,percentage)
 
-        cv2.imwrite(r"C:\Users\HP\PycharmProjects\pythonProject\demo_app\images\degradation_results\degraded.jpg", degraded_image)
+        cv2.imwrite(r"images\degradation_results\degraded.jpg", degraded_image)
 
         if self.main_app.ui.detectcheckBox.isChecked():
             loading=LoadingScreen()
@@ -199,19 +199,19 @@ class DegPage(QtWidgets.QMainWindow):
 
             detector=self.main_app.ui.detectcomboBox.currentText()
             inputimage= detect_face(input_path,detector)
-            cv2.imwrite(r"C:\Users\HP\PycharmProjects\pythonProject\demo_app\images\degradation_results\input_detected.jpg", inputimage)
-            outputimage=detect_face(r"C:\Users\HP\PycharmProjects\pythonProject\demo_app\images\degradation_results\degraded.jpg",detector)
-            cv2.imwrite(r"C:\Users\HP\PycharmProjects\pythonProject\demo_app\images\degradation_results\output_detected.jpg", outputimage)
+            cv2.imwrite(r"images\degradation_results\input_detected.jpg", inputimage)
+            outputimage=detect_face(r"images\degradation_results\degraded.jpg",detector)
+            cv2.imwrite(r"images\degradation_results\output_detected.jpg", outputimage)
             
             #set detected input image
-            self.main_app.photoViewerInput.set_image(r"C:\Users\HP\PycharmProjects\pythonProject\demo_app\images\degradation_results\input_detected.jpg", False)
+            self.main_app.photoViewerInput.set_image(r"images\degradation_results\input_detected.jpg", False)
             # set detected output img
-            self.main_app.photoViewerOutput.set_image(r"C:\Users\HP\PycharmProjects\pythonProject\demo_app\images\degradation_results\output_detected.jpg", True)
+            self.main_app.photoViewerOutput.set_image(r"images\degradation_results\output_detected.jpg", True)
             detection=True
             loading.stopLoading()
 
         if detection== False:
-            self.main_app.photoViewerOutput.set_image(r"C:\Users\HP\PycharmProjects\pythonProject\demo_app\images\degradation_results\degraded.jpg", True)
+            self.main_app.photoViewerOutput.set_image(r"images\degradation_results\degraded.jpg", True)
 
 
 

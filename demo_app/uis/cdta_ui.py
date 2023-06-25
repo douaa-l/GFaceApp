@@ -56,7 +56,7 @@ class Ui_MainWindow(object):
         self.icon.setSizePolicy(sizePolicy)
         self.icon.setMinimumSize(QtCore.QSize(100, 50))
         self.icon.setMaximumSize(QtCore.QSize(200, 100))
-        self.icon.setStyleSheet("image: url(:/images/Logo.png);background-color:rgb(36, 40, 59);padding:5px;border:none;\n"
+        self.icon.setStyleSheet("image: url(images/Logo.png);background-color:rgb(36, 40, 59);padding:5px;border:none;\n"
 "")
         self.icon.setText("")
         self.icon.setAlignment(QtCore.Qt.AlignCenter)
@@ -68,7 +68,7 @@ class Ui_MainWindow(object):
         self.degradation_btn.setStyleSheet("QPushButton{color: rgb(255, 255, 255);font-size:8pt; font-weight:bold;font-family: Georama;border:none; height: 30px}\n"
 "QPushButton:hover{background-color:rgb(28, 142, 178);}")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(":/icons/ajouter (1).png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("images/ajouter (1).png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.degradation_btn.setIcon(icon)
         self.degradation_btn.setCheckable(True)
         self.degradation_btn.setChecked(False)
@@ -79,7 +79,7 @@ class Ui_MainWindow(object):
 "QPushButton:hover{background-color:rgb(28, 142, 178);}\n"
 "")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap(":/icons/identifiant-du-visage 1.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap("images/identifiant-du-visage 1.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.restoration_btn.setIcon(icon1)
         self.restoration_btn.setCheckable(True)
         self.restoration_btn.setChecked(True)
@@ -104,7 +104,7 @@ class Ui_MainWindow(object):
         self.verification.setStyleSheet("QPushButton{color: rgb(255, 255, 255);font-size:8pt; font-weight:bold;font-family: Georama;border:none; height: 30px}\n"
 "QPushButton:hover{background-color:rgb(28, 142, 178);}")
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap(":/icons/Correct.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon2.addPixmap(QtGui.QPixmap("images/Correct.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.verification.setIcon(icon2)
         self.verification.setCheckable(True)
         self.verification.setChecked(True)
@@ -197,7 +197,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
         self.label_2 = QtWidgets.QLabel(self.frame1)
         self.label_2.setText("")
-        self.label_2.setPixmap(QtGui.QPixmap(":/icons/images/reglages.png"))
+        self.label_2.setPixmap(QtGui.QPixmap("images/reglages.png"))
         self.label_2.setAlignment(QtCore.Qt.AlignCenter)
         self.label_2.setObjectName("label_2")
         self.horizontalLayout_3.addWidget(self.label_2)
@@ -445,7 +445,7 @@ class Ui_MainWindow(object):
         self.label.setMaximumSize(QtCore.QSize(70, 50))
         self.label.setStyleSheet("padding-left:20px")
         self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap(":/icons/images/identifiant-du-visage 1.png"))
+        self.label.setPixmap(QtGui.QPixmap("images/identifiant-du-visage 1.png"))
         self.label.setAlignment(QtCore.Qt.AlignCenter)
         self.label.setObjectName("label")
         self.controlspace.addWidget(self.label)

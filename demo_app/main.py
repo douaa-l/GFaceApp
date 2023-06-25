@@ -1,5 +1,6 @@
-from demo_app.uis.cdta_ui import Ui_MainWindow
-from demo_app.python_files.pages.degradationpage import DegPage
+from uis.cdta_ui import Ui_MainWindow
+from uis.restoration_ui import Ui_Form
+from python_files.pages.degradationpage import DegPage
 from PyQt5 import QtWidgets
 import sys
 
@@ -9,7 +10,7 @@ class MainWindow(QtWidgets.QMainWindow):
         super(MainWindow, self).__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
-        self.setFixedSize(1300, 850)
+        self.setFixedSize(1300, 830)
 
         deg = DegPage(self)
         # PAGES
@@ -81,6 +82,8 @@ class MainWindow(QtWidgets.QMainWindow):
         self.activate_btn_menu()
 
     def pairs_restoration_fun(self):
+        page = Ui_Form()
+        page.setupUi(self.ui.pairrestorationpage)
         self.ui.stackedWidget.setCurrentWidget(self.ui.pairrestorationpage)
         self.activate_btn_menu()
         self.ui.pairs_rest_btn.setStyleSheet("color: white;font-size:8pt; font-weight:bold;font-family: Georama;border:none; height: 30px}\n"
